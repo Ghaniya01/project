@@ -14,13 +14,13 @@ import {
 import { animateScroll as scroll } from "react-scroll";
 
 const Navbar = ({ toggle }) => {
-  const [scrollNav, setScrollNav] = useState(false);
+  const [scrollNav, setScrollNav] = useState(true);
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
-      setScrollNav(true);
-    } else {
       setScrollNav(false);
+    } else {
+      setScrollNav(true);
     }
   };
 
@@ -38,50 +38,6 @@ const Navbar = ({ toggle }) => {
           <NavLogo to="/" onClick={toggleHome}>
             Digismart
           </NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks
-                to="about"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                About
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="features"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                Features
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="signup"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                Sign Up
-              </NavLinks>
-            </NavItem>
-          </NavMenu>
-          <NavBtn>
-            <NavBtnLink to="/login"> Sign In</NavBtnLink>
-          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>

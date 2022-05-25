@@ -2,13 +2,21 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { btnReset, v } from "../../styles/variables";
+export const FormCont = styled.div`
+  background: linear-gradient(
+    106.37deg,
+    #ffe1bc 29.63%,
+    #ffcfd1 51.55%,
+    #f3c6f1 90.85%
+  );
+`;
 
 export const SForm = styled.form`
   width: 100%;
   background: ${({ theme }) => theme.bg2};
   border-radius: ${v.borderRadius};
   padding: ${v.mdSpacing};
-  margin-top: 40px;
+  margin-top: 90px;
 `;
 
 export const SFormTitle = styled.span`
@@ -45,7 +53,7 @@ export const SInput = styled.input`
 export const SButton = styled.button`
   ${btnReset};
   width: 100%;
-  background: ${({ theme }) => theme.bgSecondary};
+  background: #82a4e3;
   color: ${({ theme }) => theme.textSecondary};
   padding: ${v.smSpacing};
   display: flex;
@@ -67,5 +75,5 @@ export const SRedirectLabel = styled.span`
 `;
 
 export const SRedirectLink = styled(Link)`
-  color: ${({ theme }) => theme.primary};
+  color: #82a4e3;
 `;
